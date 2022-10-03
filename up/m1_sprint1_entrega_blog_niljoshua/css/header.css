@@ -1,0 +1,23 @@
+.header{
+    position: fixed;
+    align-items: center;
+    background-color: #00003c;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);	
+    display: flex;
+    justify-content: center;			
+}
+.header-img {
+    width: 100px;
+    display: flex;
+}
+.header-kenzie{
+    margin-top: -9px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    display: flex;
+}
