@@ -5,12 +5,6 @@
     --branco-padrao: #fff;
     --preto-padrao: #000;
 }
-.botao {
-    grid-area: botao;
-    grid-row: 4;
-    grid-column: 2;
-    justify-self: center;
-}
 .box{
     background: var(--cinza-padrao);
     width: 660px;
@@ -18,16 +12,13 @@
     padding: 20px;
     border-radius: 10px;
     color: var(--cinza-claro);
-    display: grid;
-    grid-template-rows: 5rem 3rem 12rem 5rem ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .cont {
-    display: grid;
-    gap: 0.5rem;
-    grid-column: 2;
-    grid-row: 3 ;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 12rem;
+    display: flex;
 }
 .container {
     width: 100vw;
@@ -53,19 +44,7 @@
     background: var(--branco-padrao);
     color: var(--preto-padrao);
 }
-
-.logo-kenzie {
-    grid-area: logo-kenzie; 
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-}
-
 .logo-texto {
-    grid-area: logo-texto; 
-    grid-row: 2;
-    grid-column: 2;
-    justify-self: center;
     margin-bottom: 0;
 }
 
@@ -74,6 +53,7 @@
     opacity: 0.6;
     width: 160px; 
     transition: 0.4s;
+    margin: 0 4px;
 } 
 .usuario:hover {
     opacity: 1;
@@ -92,6 +72,7 @@
 
 .usuario-conteudo {
     text-align: center;
+    margin-top: 13px;
 }
 
 .usuario-imagem {
