@@ -65,11 +65,11 @@ if (numero1Q5 == 1) {
 }
 
 /* 6 */
-let salario = parseFloat(prompt('Informe o salario:'));
+let salarioQ6 = parseFloat(prompt('Informe o salario:'));
 let reajuste = parseFloat(prompt('Informe o reajuste:'));
 
 if (reajuste <= 5) {
-    let novoSalario = salario + (salario * reajuste / 100)
+    let novoSalario = salarioQ6 + (salarioQ6 * reajuste / 100)
     alert(`O salário do funcionário corrigido é de: ${novoSalario}`);
 } else {
     alert('Não haverá reajuste no salario')
@@ -95,8 +95,8 @@ alert(`Seu veículo percorreu ${distancia.toFixed()}km a ${velocidade.toFixed()}
 let valor = parseFloat(prompt('Informe o valor'));
 let taxa = parseFloat(prompt('Informe a taxa'));
 let tempo = parseInt(prompt('Informe o tempo'));
-let prestacao = valor + (valor*(taxa/100)*tempo);
+let prestacaoQ10 = valor + (valor*(taxa/100)*tempo);
 if (tempo == 0) {
     alert('Valor inválido o tempo de atraso deve ser em dias.')
 }
-alert (`O valor da prestação é R$${prestacao}`);
+alert (`O valor da prestação é R$${prestacaoQ10}`);
