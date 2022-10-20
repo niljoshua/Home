@@ -5,9 +5,11 @@ let numero2 = parseInt(prompt('Informe o segundo numero:'));
 if (numero1 > numero2) {
     let diferenca = numero1-numero2;
     alert(`O maior numero é ${numero1} e a diferença é ${diferenca}`);
-} else {
+} else if (numero1 < numero2) {
     diferenca = numero2-numero1;
     alert(`O maior numero é ${numero2} e a diferença é ${diferenca}`);
+} else {
+    alert('Os numeros são iguais')
 }
 
 /* 2 */ 
@@ -42,6 +44,8 @@ if (numero1Q4 % 3 == 0 && numero1Q4 % 5 == 0) {
     alert('Valor divisivel por 5');
 } else if (numero1Q4 % 2 == 0) {
     alert('É par')
+} else if (numero1Q4 % 2 != 0) {
+    alert('É impar')
 }
 
 /* 5 */
@@ -77,7 +81,7 @@ if (reajuste <= 5) {
 
 /* 7 */
 let dolar = parseFloat(prompt('Informe o valor do dolar'));
-let cotacao = 5.29;
+let cotacao = parseFloat(prompt('Informe a cotação'));
 let real = dolar*cotacao;
 
 alert(`$${dolar} é equivalente a R$${real}, tendo ${cotacao} como cotação.`)
@@ -89,14 +93,16 @@ let automovelFazPorLitro = 12;
 let distancia = tempoViagem * velocidade;
 let litrosGastos = distancia/automovelFazPorLitro;
 
-alert(`Seu veículo percorreu ${distancia.toFixed()}km a ${velocidade.toFixed()}km/h em ${tempoViagem.toFixed()}h de viagem e consumiu ${litrosGastos.toFixed()}l de gasolina`);
+alert(`Seu veículo percorreu ${distancia.toFixed()}km a ${velocidade.toFixed()}km/h em ${tempoViagem.toFixed()}h de viagem e consumiu ${litrosGastos.toFixed(2)} litros de gasolina`);
 
 /* 10 */
 let valor = parseFloat(prompt('Informe o valor'));
 let taxa = parseFloat(prompt('Informe a taxa'));
 let tempo = parseInt(prompt('Informe o tempo'));
 let prestacaoQ10 = valor + (valor*(taxa/100)*tempo);
-if (tempo == 0) {
-    alert('Valor inválido o tempo de atraso deve ser em dias.')
+
+if ( tempo == 0 || isNaN(tempo)) {
+    alert('Valor inválido o tempo de atraso deve ser em dias.');
+} else {
+    alert (`O valor da prestação é R$${prestacaoQ10}`);
 }
-alert (`O valor da prestação é R$${prestacaoQ10}`);
