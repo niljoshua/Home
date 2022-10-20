@@ -86,6 +86,36 @@ let real = dolar*cotacao;
 
 alert(`$${dolar} é equivalente a R$${real}, tendo ${cotacao} como cotação.`)
 
+/* 8 */
+
+let tipoPulverizacao = parseInt(prompt('Informe o tipo de pulverizacao de 1 a 4:'));
+let areaPulverizacao = parseFloat(prompt('Informe a area a ser pulverizada:'));
+let desconto;
+let valorPorTipoPulverizacao = 0;
+
+    if (tipoPulverizacao = 1) {
+        valorPorTipoPulverizacao = 50;
+    } else if (tipoPulverizacao = 2) {
+        valorPorTipoPulverizacao = 100;
+    } else if (tipoPulverizacao = 3) {
+        valorPorTipoPulverizacao = 150;
+    } else if (tipoPulverizacao = 4) {
+        valorPorTipoPulverizacao = 250;
+    }
+    
+    let custo = valorPorTipoPulverizacao * areaPulverizacao;
+
+    if(areaPulverizacao > 1000) {
+        desconto = custo*0.05;
+        custo=custo-desconto;
+    } else if (custo > 750) {
+        desconto = (custo-750)*0.10;
+        custo=custo-desconto;
+    }
+
+alert(`O valor a ser pago é de: R$${custo}`);
+
+
 /* 9 */
 let tempoViagem = parseFloat(prompt('Informe o tempo de viagem'));
 let velocidade =  parseFloat(prompt('Informe a velocidade'));
